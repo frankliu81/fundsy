@@ -27,8 +27,9 @@ class CampaignsController < ApplicationController
   end
 
   def index
-    # @campaigns = Campaign.order(:created_at).all
-    @campaigns = Campaign.all
+    # database may order the return record differently, making test fails
+    @campaigns = Campaign.order(:created_at)
+    #@campaigns = Campaign.all
   end
 
   def edit
