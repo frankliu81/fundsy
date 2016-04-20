@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
   # resources :campaigns, only: [:new, :create, :show, :index, :edit, :update, :delete]
-  resources :campaigns
+  resources :campaigns do
+    resources :pledges, only: [:new, :create]
+  end
 
   resources :users, only: [:new, :create]
+
 
   root "campaigns#index"
 

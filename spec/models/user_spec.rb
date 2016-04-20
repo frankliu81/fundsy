@@ -39,7 +39,7 @@ RSpec.describe User, type: :model do
       it "generates a password digest" do
         u = User.new FactoryGirl.attributes_for(:user)
         u.save
-        expect(u.password).to be
+        expect(u.password_digest).to be
       end
     end
 

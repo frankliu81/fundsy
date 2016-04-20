@@ -6,7 +6,7 @@ RSpec.describe UsersController, type: :controller do
       get :new
       expect(response).to render_template(:new)
     end
-    it "asssigns a new user variable" do
+    it "assigns a new user variable" do
       get :new
       # assigns expect a user instance variable, be_a_new check the type
       expect(assigns(:user)).to be_a_new(User)
