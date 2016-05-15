@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.create user_params
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path, notice: "User created"
+      redirect_to root_path, notice: "Account Created!"
     else
       render :new
     end
