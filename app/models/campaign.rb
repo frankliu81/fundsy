@@ -1,5 +1,6 @@
 class Campaign < ActiveRecord::Base
   has_many :pledges, dependent: :destroy
+  belongs_to :user
 
   # presence would check nil and empty string
   validates :title, presence: true, uniqueness: true

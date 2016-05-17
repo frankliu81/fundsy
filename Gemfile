@@ -28,6 +28,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass'
 gem 'simple_form'
+
+gem 'active_model_serializers'
+
 gem 'sidekiq'
 
 # Use Unicorn as the app server

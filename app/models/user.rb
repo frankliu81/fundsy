@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :pledges, dependent: :nullify
+  has_many :campaigns, dependent: :nullify
 
   #attr_accessor :password
   has_secure_password

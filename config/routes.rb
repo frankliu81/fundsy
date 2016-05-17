@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
 
 
+  namespace :api, defaults: { format: :json }  do
+    namespace :v1 do
+      resources :campaigns
+    end
+  end
+
   root "campaigns#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
