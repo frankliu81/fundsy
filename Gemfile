@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'sidekiq'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -46,6 +47,7 @@ group :development, :test do
   gem 'cowsay'
   gem 'capybara'
   gem 'launchy'
+
 
 end
 
