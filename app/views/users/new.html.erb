@@ -2,7 +2,8 @@
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :email %>
-  <%= f.input :password %>
+  <%# catpants is a gem that does password validation  %>
+  <%= f.input :password, label_html: {id: "catpants"} %>
   <%= f.input :password_confirmation %>
 
   <div class="form-actions">

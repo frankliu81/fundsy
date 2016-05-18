@@ -64,7 +64,7 @@ class CampaignsController < ApplicationController
 
   def campaign_params
     # require make sure there is a key :campaign
-    campaign_params = params.require(:campaign).permit(:title, :body, :goal, :end_date)
+    campaign_params = params.require(:campaign).permit(:title, :body, :goal, :end_date, :address)
   end
 
 

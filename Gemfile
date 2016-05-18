@@ -31,6 +31,10 @@ gem 'simple_form'
 
 gem 'active_model_serializers'
 
+gem "geocoder"
+gem 'gmaps4rails'
+gem 'underscore-rails'
+
 gem 'sidekiq'
 
 # Use Unicorn as the app server

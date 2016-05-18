@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :pledges, only: [:new, :create]
   end
 
+  resources :nearby_campaigns, only: [:index]
   resources :users, only: [:new, :create]
 
 

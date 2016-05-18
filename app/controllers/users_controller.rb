@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def create
     user_params = params.require(:user).permit(:first_name, :last_name,
-        :email, :password)
+        :email, :password, :address)
     @user = User.create user_params
     if @user.save
       session[:user_id] = @user.id
