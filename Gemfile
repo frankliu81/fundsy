@@ -40,6 +40,8 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 
 gem 'sidekiq'
+gem "cocoon"
+gem "quiet_assets"
 
 # Use Unicorn as the app server
 # gem 'unicorn'

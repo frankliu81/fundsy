@@ -1,6 +1,11 @@
 class Campaign < ActiveRecord::Base
-  has_many :pledges, dependent: :destroy
   belongs_to :user
+  has_many :pledges, dependent: :destroy
+  has_many :rewards, dependent: :destroy
+  # this enables
+  accepts_nested_attributes_for :rewards, 
+                              reject_if: :all_blank,
+                              allow_destroy: true
 
   # presence would check nil and empty string
   validates :title, presence: true, uniqueness: true
