@@ -3,10 +3,23 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   get "/auth/twitter", as: :sign_in_with_twitter
   get "/auth/twitter/callback" => "callbacks#twitter"
-  
+
   # resources :campaigns, only: [:new, :create, :show, :index, :edit, :update, :delete]
   resources :campaigns do
+    #patch abc # has campaign_id
+    #patch abc, on: :collection # remove campaign_id
+
     resources :pledges, only: [:new, :create]
+
+    # this requires campaign_id and publishings_id
+    #{ }/campaigns/:campaign_id/publishings/:id
+    #resources :publishings, only: [:update]
+
+    # we don't need the publishings_id
+    # /campaigns/:campaign_id/publishings
+    resources :publishings, only: [] do
+      patch :update, on: :collection
+    end
   end
 
   resources :nearby_campaigns, only: [:index]

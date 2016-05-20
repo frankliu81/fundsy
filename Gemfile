@@ -42,6 +42,8 @@ gem 'underscore-rails'
 gem 'sidekiq'
 gem "cocoon"
 gem "quiet_assets"
+# act as state machine
+gem "aasm"
 
 # Use Unicorn as the app server
 # gem 'unicorn'
