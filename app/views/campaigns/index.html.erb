@@ -3,6 +3,6 @@
 <% @campaigns.each do |campaign| %>
 <!-- well class here is a bootstrap class -->
   <div class="well">
-    <h3><%= link_to campaign.title.capitalize, campaign%></h3>
+    <%= campaign.decorate.h3_title %>
   </div>
 <% end %>
