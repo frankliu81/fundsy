@@ -44,7 +44,10 @@ gem "cocoon"
 gem "quiet_assets"
 # act as state machine
 gem "aasm"
+# decorator
 gem "draper"
+
+gem "stripe"
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -77,10 +80,10 @@ end
 
 
 group :development do
-  #gem 'pry'
-  #gem 'pry-byebug'
-  #gem 'pry-doc'
-  #gem 'pry-rails'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-rails'
   gem 'interactive_editor'
   gem 'awesome_print'
   gem 'hirb'

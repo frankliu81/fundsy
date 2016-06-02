@@ -22,6 +22,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :pledges, only: [] do
+    resources :payments
+  end
+
   resources :nearby_campaigns, only: [:index]
   resources :users, only: [:new, :create]
 
