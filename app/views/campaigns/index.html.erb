@@ -2,7 +2,9 @@
 <h2> Recent Campaigns </h2>
 <% @campaigns.each do |campaign| %>
 <!-- well class here is a bootstrap class -->
-  <div class="well">
-    <%= campaign.decorate.h3_title %>
-  </div>
+  <%= cache campaign do %>
+    <div class="well">
+      <%= campaign.decorate.h3_title %> (<%= campaign.pledges.size %>)
+    </div>
+  <% end %>
 <% end %>

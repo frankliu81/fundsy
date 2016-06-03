@@ -35,7 +35,9 @@ class CampaignsController < ApplicationController
 
   def index
     # database may order the return record differently, making test fails
-    @campaigns = Campaign.order(:created_at)
+    #@campaigns = Campaign.order(:created_at)
+    @campaigns = Campaign.includes(:pledges).order(:created_at).references(:pledges)
+
     respond_to do |format|
       # note that render json: will automatically call .to_json method to the argument
       format.json { render json: @campaigns.to_json }
